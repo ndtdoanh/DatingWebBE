@@ -32,7 +32,7 @@ spring:
     #url: jdbc:mysql://datingapp-1.cjgk64oswovm.ap-southeast-2.rds.amazonaws.com:3306/datingapp
     #username: root
     #password: huongntn04
-    url: jdbc:mysql://root:AgsYTjxxGiDVOAvaahHRpUlGFryPkBQv@mysql.railway.internal:3306/railway
+    url: jdbc:mysql://root:AgsYTjxxGiDVOAvaahHRpUlGFryPkBQv@junction.proxy.rlwy.net:52146/railway
     username: root
     password: AgsYTjxxGiDVOAvaahHRpUlGFryPkBQv
 
