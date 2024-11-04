@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <changeSet author="Dev" id="4">
+        <!-- admin -->
+        <sql>
+            <![CDATA[
+            INSERT INTO `cafes` (`cafe_id`, `address`, `bio`, `image_url`, `name`, `price_range_min`, `price_range_max`) VALUES
+                    (1, '123 Đường ABC, Thành phố HCM', 'Một quán cà phê yên tĩnh, lý tưởng để học tập và làm việc.', 'https://lh5.googleusercontent.com/xEB28dgmGVfeHFwphKoM-8dJQIOx9_DaicwPUEeM20evM0ALdf1EUWS_Qmbpm_-XPRFcdmQ7kWtTafkgnAc-5FSBFHTdfZ66Ybdike8NHdNVJx5-KRgG92N3Qktwhecfm6ArRN8v', 'Cà phê Sáng Tạo', 20.0, 50.0),
+                    (2, '456 Đường XYZ, Thành phố Hà Nội', 'Nơi lý tưởng cho những buổi gặp mặt bạn bè.', 'https://rangxaycaphe.com.vn/uploads/news/11_2020/tha-hon-theo-may-troi-quan-cafe-view-dep-o-da-lat-view-360-1.jpg', 'Cà phê Hội Ngộ', 15.0, 30.0),
+                    (3, '789 Đường DEF, Thành phố Đà Nẵng', 'Quán cà phê có không gian ngoài trời đẹp.', 'https://www.duthuyenhalong.com/media/uploads/froala_editor/images/image7_f8aV7Dj.jpg', 'Cà phê Biển Xanh', 25.0, 60.0),
+                    (4, '321 Đường GHI, Thành phố Cần Thơ', 'Một quán cà phê phục vụ món ăn ngon.', 'https://salework.net/wp-content/uploads/2022/08/Lofita-Cafe.jpg', 'Cà phê Sống Động', 10.0, 40.0),
+                    (5, '654 Đường JKL, Thành phố Nha Trang', 'Nơi lý tưởng để thư giãn bên ly cà phê.', 'https://datviettour.com.vn/uploads/images/tin-tuc-SEO/tay-nguyen/da-lat/danh-thang/tiem-cafe-tui-mo-to-anh-1.jpg', 'Cà phê Thư Giãn', 18.0, 45.0);
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

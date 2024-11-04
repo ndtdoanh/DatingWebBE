@@ -1,0 +1,57 @@
+version: '2'
+volumes:
+  oracle-data:
+  oracle-backup:
+services:
+  oracle:
+    image: gvenzl/oracle-xe
+    container_name: oracle
+    #    image: doctorkirk/oracle-19c:latest
+    #    container_name: oracle_19
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: 123456
+#      root_user: system
+#  docker run --name oracledb -p 1521:1521 -e ORACLE_PASSWORD=123456 gvenzl/oracle-xe
+#services:
+#  grpc-service:
+#    build:
+#      context: grpc
+#      dockerfile: Dockerfile
+#    container_name: grpc-service
+#    image: sacom-grpc:latest
+#    ports:
+#      - "9000:9000"
+#  orchestrator-service:
+#    build:
+#      context: orchestrator-service
+#      dockerfile: Dockerfile
+#    container_name: orchestrator-service
+#    image: sacom-orchestrator:latest
+#    ports:
+#      - "9000:9000"
+#  receiver-service:
+#    build:
+#      context: receiver-service
+#      dockerfile: Dockerfile
+#    container_name: receiver-service
+#    image: sacom-receiver-service:latest
+#    ports:
+#      - "9002:9002"
+#  sender-service:
+#    build:
+#      context: sender-service
+#      dockerfile: Dockerfile
+#    container_name: sender-service
+#    image: sacom-sender:latest
+#    ports:
+#      - "9001:9001"
+#  orches-service:
+#    build:
+#      context: orches-service
+#      dockerfile: Dockerfile
+#    container_name: orches-service
+#    image: sacom-orches-service:latest
+#    ports:
+#      - "9292:9292"

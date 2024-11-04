@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <changeSet author="Dev" id="8">
+        <!-- admin: 'Not Responded', 'Responded' -->
+        <sql>
+            <![CDATA[
+                ALTER TABLE contact_form MODIFY id INT AUTO_INCREMENT;
+
+                INSERT INTO contact_form (full_name, email, phone_number, message, submission_date, response_date, response_status)
+                VALUES
+                ('Nguyễn Văn A', 'nguyenvana@example.com', '0912345678', 'Tôi muốn biết thêm về sản phẩm.', NOW(), NULL, 'Not Responded'),
+                ('Trần Thị B', 'tranthib@example.com', '0987654321', 'Có thể tư vấn cho tôi về dịch vụ của bạn không?', NOW(), NULL, 'Not Responded'),
+                ('Lê Văn C', 'levanc@example.com', '0901234567', 'Cảm ơn dịch vụ của bạn, rất hài lòng!', NOW(), NULL, 'Not Responded'),
+                ('Phạm Minh D', 'phamminhd@example.com', '0934567890', 'Tôi muốn đặt hàng.', NOW(), NULL, 'Not Responded'),
+                ('Hoàng Thị E', 'hoangthie@example.com', '0945678901', 'Có chương trình khuyến mãi nào không?', NOW(), NULL, 'Not Responded');
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

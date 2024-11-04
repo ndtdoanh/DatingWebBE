@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <changeSet author="Dev" id="5">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <columnExists tableName="Cafes" columnName="status"/>
+            </not>
+        </preConditions>
+        <!-- admin -->
+        <sql>
+            <![CDATA[
+            ALTER TABLE Cafes ADD COLUMN status VARCHAR(255);
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

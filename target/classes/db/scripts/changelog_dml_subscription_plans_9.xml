@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <changeSet author="Dev" id="9">
+        <!-- admin -->
+        <sql>
+            <![CDATA[
+                -- FREE Plan
+                INSERT INTO `subscription_plans` (`plan_id`, `description`, `duration`, `has_like_limit`, `has_show_priority`, `has_view_profile`, `has_watch_like`, `image_url`, `name`, `price`, max_daily_swipes)
+                VALUES
+                (1, 'Free plan', null, b'1', b'0', b'0', b'1', 'https://i.ibb.co/mG9xdTr/istockphoto-1453784742-612x612.jpg', 'FREE', 0, 20);
+
+                -- TRIAL Plan
+                INSERT INTO `subscription_plans` (`plan_id`, `description`, `duration`, `has_like_limit`, `has_show_priority`, `has_view_profile`, `has_watch_like`, `image_url`, `name`, `price`, max_daily_swipes)
+                VALUES
+                (2, 'Trial plan', 7, b'1', b'0', b'1', b'1', 'https://i.ibb.co/fYFZfj3/trial-logo-73-6668.png', 'TRIAL', 10000, 100000);
+
+                -- PREMIUM Plan
+                INSERT INTO `subscription_plans` (`plan_id`, `description`, `duration`, `has_like_limit`, `has_show_priority`, `has_view_profile`, `has_watch_like`, `image_url`, `name`, `price`, max_daily_swipes)
+                VALUES
+                (3, 'Premium plan', 30, b'1', b'1', b'1', b'1', 'https://i.ibb.co/2yZ8BMw/premium-button-speech-bubble-premium-colorful-web-banner-illustration-premium-label-sign-template-ve.jpg', 'PREMIUM', 50000, 100000);
+
+            ]]>
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

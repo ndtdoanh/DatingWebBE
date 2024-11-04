@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: dating-app-api
+  #description: API cho ứng dụng Dating
+  #title: Dating App API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: kientrungak@gmail.com
+  definition:
+    $text: https://raw.githubusercontent.com/KienNguyenFPT/Dating-WEB/main/backend/api-definition.yaml  # Đường dẫn đến file định nghĩa API
